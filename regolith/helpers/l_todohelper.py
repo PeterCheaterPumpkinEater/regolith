@@ -42,8 +42,9 @@ def subparser(subpi):
 
     subpi.add_argument("-s", "--stati", nargs='+',
                        choices=TODO_STATI,
+                       #widget="Listbox",
                        help=f'Filter tasks with specific stati',
-                       default=["started"],
+                       default="started",
                        **listbox_kwargs)
     subpi.add_argument("--short", nargs='?', const=30,
                        help='Filter tasks with estimated duration <= 30 mins, but if a number is specified, the duration of the filtered tasks will be less than that number of minutes.',
